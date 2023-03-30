@@ -1,0 +1,14 @@
+// @import 'config';
+@import 'utils' ;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'neue machina';
+}
+
+body{
+    background-color: $background-dark;
+}
+

@@ -1,0 +1,145 @@
+@import "utils";
+
+section.home-section {
+  margin-top: 12.6875rem;
+  min-height: 100vh;
+  .home {
+    .hero-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      // flex-direction: column;
+      & > h1 {
+        font-family: "Neue Machina";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 90px;
+        line-height: 120%;
+        text-align: center;
+        background-size: 300% 100%;
+        // background-image: linear-gradient(to right, red, orange, yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        max-width: 58rem;
+        margin: 0 auto;
+        transition: all 1s ease;
+        animation: gradientAnimation 5s ease infinite;
+      }
+
+      & > p {
+        font-family: "Neue Machina";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.75rem;
+        line-height: 140%;
+        text-align: center;
+        color: #babac4;
+        margin-top: 0.875rem !important;
+        max-width: 35rem;
+        margin: 0 auto;
+      }
+
+      button.btn {
+        color: $text-light;
+        background: linear-gradient(
+          261.46deg,
+          rgba(242, 5, 159, 0.2) -41.61%,
+          rgba(14, 14, 14, 0.2) 60.45%
+        );
+      }
+
+      button.button {
+        --x: 50%;
+        --y: 50%;
+
+        font-family: "Neue Machina";
+        margin-top: 3rem;
+        transition: all 0.1s ease-in-out;
+        position: relative;
+        appearance: none;
+        padding: 1.25rem;
+        color: white;
+        cursor: pointer;
+        outline: none;
+        border-radius: 13.4032px;
+        font-weight: 800;
+        // background: linear-gradient(
+        //   261.46deg,
+        //   rgba(242, 5, 159, 0.2) -41.61%,
+        //   rgba(14, 14, 14, 0.2) 60.45%
+        // );
+        /* The magic */
+        border: 1px solid transparent;
+        font-size: 1.25rem;
+        animation: borderGradientAnimation 1s ease infinite;
+      }
+
+      @keyframes hold-blink {
+        0% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+        50% {
+          text-shadow: none;
+        }
+        60% {
+          text-shadow: none;
+        }
+        100% {
+          text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+      }
+    }
+  }
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+    background-image: linear-gradient(93.55deg, #f2059f 25.2%, #0ecfe5 88.67%);
+  }
+  50% {
+    background-position: 100% 50%;
+    background-image: linear-gradient(93.55deg, #f2059f 25.2%, #0ecfe5 88.67%);
+  }
+  100% {
+    background-position: 0% 50%;
+    background-image: linear-gradient(93.55deg, #f2059f 25.2%, #0ecfe5 88.67%);
+  }
+}
+
+
+@keyframes borderGradientAnimation {
+    0% {
+      background-position: 0% 50%;
+      background: linear-gradient(#000, #340825) padding-box,
+      radial-gradient(
+          farthest-corner at var(--x) var(--y),
+          #0ECFE5,
+          #F2059F
+        )
+        border-box;
+    }
+    50% {
+      background-position: 100% 50%;
+      background: linear-gradient(#000, #3e0a2d) padding-box,
+      radial-gradient(
+          farthest-corner at var(--x) var(--y),
+          #0ECFE5,
+          #F2059F
+        )
+        border-box;
+    }
+    100% {
+      background-position: 0% 50%;
+      background: linear-gradient(#000, #340825) padding-box,
+      radial-gradient(
+          farthest-corner at var(--x) var(--y),
+          #0ECFE5,
+          #F2059F
+        )
+        border-box;
+    }
+  }

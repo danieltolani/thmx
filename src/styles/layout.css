@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "neue machina";
+  src: url(../assets/fonts/NeueMachina-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue machina";
+  src: url(../assets/fonts/NeueMachina-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue machina";
+  src: url(../assets/fonts/NeueMachina-Ultrabold.woff) format("woff");
+  font-weight: 800;
+}
+.nav-section {
+  position: fixed;
+  top: 70px; /* Replace with the desired distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Replace with desired width percentage */
+  max-width: 1200px; /* Optional: Set a maximum width to the navbar */
+  background-color: #fff; /* Replace with your desired background color */
+  z-index: 100;
+  max-width: 93%;
+  margin: 0 auto;
+  background: rgba(14, 14, 14, 0.7);
+  background: rgba(42, 43, 56, 0.084);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(20px);
+  background-attachment: scroll;
+  border-radius: 500px;
+}
+.nav-section .nav-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.625rem 3.25rem;
+}
+.nav-section .nav-links .brand-logo-2-container {
+  display: none;
+}
+.nav-section .nav-links .nav-routes-container {
+  display: flex;
+}
+.nav-section .nav-links .nav-routes-container .side-bar-link:not(:first-child) {
+  margin-left: 3em;
+}
+.nav-section .nav-links .nav-routes-container a.side-bar-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  font-family: "Neue Machina";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18.9px;
+  line-height: 18px;
+}
+
+@media screen and (max-width: 890px) {
+  .nav-section .nav-links .brand-logo {
+    display: block;
+  }
+  .nav-section .nav-links .nav-routes-container {
+    display: none;
+  }
+  .nav-section .nav-links .nav-rhs {
+    display: flex;
+    align-items: center;
+  }
+  .nav-section .nav-links .nav-rhs .menu-container {
+    margin-left: 1.5rem;
+    display: flex;
+  }
+}
+
+/*# sourceMappingURL=layout.css.map */

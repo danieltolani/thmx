@@ -1,0 +1,96 @@
+@import 'utils';
+
+.nav-section{
+  position: fixed;
+  top: 70px; /* Replace with the desired distance from top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%; /* Replace with desired width percentage */
+  max-width: 1200px; /* Optional: Set a maximum width to the navbar */
+  background-color: #fff; /* Replace with your desired background color */
+  z-index: 100;
+    max-width: 93%;
+    margin: 0 auto;
+    background: rgba(14, 14, 14, 0.7);
+    background: rgba(42, 43, 56, 0.084);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(20px);
+    background-attachment: scroll;
+    border-radius: 500px;
+    
+
+    .nav-links{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2.625rem 3.25rem;
+
+
+        .brand-logo-2-container{
+            display: none;
+        }
+    
+        .nav-routes-container{
+            display: flex;
+
+            .side-bar-link:not(:first-child){
+                margin-left: 3em;
+            }
+
+            a.side-bar-link{
+                color: $text-light;
+                text-decoration: none;
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                font-family: 'Neue Machina';
+                font-style: normal;
+                font-weight: 800;
+                font-size: 18.9px;
+                line-height: 18px;
+            }
+        }
+        
+        // .nav-rhs{
+        //     button.button{
+        //         border: 0;x
+        //         padding: 1em 1.875em;
+        //         font-size: 1rem;
+        //         border-radius: 10px;
+        //         background: $primary-color;
+        //         color: $text-light;
+        //         cursor: pointer;
+        //     }
+
+        //     .menu-container{
+        //         display: none;
+        //     }
+        // }
+        
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .nav-section{
+
+        .nav-links{
+
+            .brand-logo{
+                display: block;
+            }
+
+            .nav-routes-container{
+                display: none;
+            }
+
+            .nav-rhs{
+                display: flex;
+                align-items: center;
+
+                .menu-container{
+                    margin-left: 1.5rem;
+                    display: flex;
+                }
+            }
+        }
+    }
+}
