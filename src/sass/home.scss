@@ -1,9 +1,11 @@
 @import "utils";
 
 section.home-section {
-  margin-top: 16.6875rem;
-  min-height: 100vh;
+  padding-top: 16.6875rem;
   .home {
+  // border: 2px solid red;
+  min-height: calc(100vh - 16.6875rem);
+
     .hero-section {
       display: flex;
       flex-direction: column;

@@ -16,8 +16,10 @@
   font-weight: 800;
 }
 section.home-section {
-  margin-top: 16.6875rem;
-  min-height: 100vh;
+  padding-top: 16.6875rem;
+}
+section.home-section .home {
+  min-height: calc(100vh - 16.6875rem);
 }
 section.home-section .home .hero-section {
   display: flex;

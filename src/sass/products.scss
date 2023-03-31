@@ -1,0 +1,148 @@
+@import 'utils';
+
+section.products-section{
+    border: 1px solid #D7D7D7;
+    border-radius: 15px;
+    color: wheat !important;
+
+    display: grid;
+    background: rgba(14, 14, 14, 0.7);
+border: 1px solid rgba(255, 255, 255, 0.35);
+backdrop-filter: blur(7.5px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 53px;
+    .products{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding-left: 3.25rem;
+        cursor: pointer;
+        position: relative;
+        max-width: 100%;
+        padding-top: auto;
+
+
+        img.img{
+            overflow: visible; /* allow the image to overflow the flex container */
+            // margin-left: 120px; /* add some margin to the image */
+            transform: translateX(2rem);
+        }
+
+        
+
+        .card-details{
+            justify-self: flex-end;
+            margin-top: auto !important;
+            color: white !important;
+            display: flex;
+            justify-content: space-between;
+
+            .card-lhs{
+                transform: translateY(-4rem);
+                align-self: flex-end;
+                flex-shrink: 0;
+
+                .product-copies{
+                    display: flex;
+                    flex-direction: column;
+    
+                    & > h1{
+                        font-size: 3.75em;
+                        font-weight: $font-weight-3;
+                        max-width: 26.625rem;
+    
+                        background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.7) -5.51%, #FFFFFF 62.38%, rgba(255, 255, 255, 0.13) 116.64%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+    
+                    & > p{
+                        font-size: 1.75rem;
+                        margin-top: 0.625em;
+                        max-width: 36.545rem;
+                        line-height: 120%;
+                        font-weight: $font-weight-2;
+                        background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.42) -5.51%, rgba(255, 255, 255, 0.6) 62.38%, rgba(255, 255, 255, 0.078) 116.64%);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
+                        text-fill-color: transparent;
+                    }
+                }
+
+
+                button.button {
+                    --x: 50%;
+                    --y: 50%;
+            
+                    font-family: "Neue Machina";
+                    margin-top: 3rem;
+                    transition: all 0.1s ease-in-out;
+                    position: relative;
+                    appearance: none;
+                    padding: 1.25rem;
+                    color: white;
+                    cursor: pointer;
+                    outline: none;
+                    border-radius: 13.4032px;
+                    font-weight: 800;
+
+                    /* The magic */
+                    border: 2px solid transparent;
+                    background: linear-gradient(#f2059f2f, #3e0a2d59) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #f2059f, #5f17a7, #0ecfe524,) border-box;
+                    border: 1px solid transparent;
+                    font-size: 1.25rem;
+                  }
+            }
+        }
+    }
+}
+
+.products-wrapper{
+
+    margin-bottom: 3.375rem;
+
+     & > h1{
+        margin-top: 3.635rem !important;
+        font-size: 2.25rem;
+        margin-bottom: 2.875rem !important;
+        text-align: center;
+        max-width: 33rem;
+        text-align: center;
+        margin: 0 auto;
+        background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.7) -5.51%, #FFFFFF 62.38%, rgba(255, 255, 255, 0.13) 116.64%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+
+     }
+}
+
+.products-data-container{
+    
+    max-width: 93%;
+    margin: 0 auto;
+    // width: 100%;
+    display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-template-columns: repeat(auto-fit, minmax(1/2fr, auto));
+    // grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+
+    & > :first-child {
+        grid-column: 1 / -1;
+    }
+
+
+
+    & > * {
+        height: 576px;
+        min-width: 100%;
+      }
+}
