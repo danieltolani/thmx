@@ -7,6 +7,7 @@ import '../styles/layout.css'
 const CustomNavLink = ({ to, ...props }) => {
     let activeStyle = {
       textDecoration: 'underline',
+
       // backgroundPosition: '0% 50%',
       // backgroundImage: 'linear-gradient(93.55deg, #f2059f .2%, #0ecfe5 88.67%)', webkitBackgroundClip: 'text',
       // webkitTextFillColor: 'transparent',

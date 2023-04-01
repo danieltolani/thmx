@@ -22,8 +22,7 @@
   transform: translateX(-50%);
   width: 80%; /* Replace with desired width percentage */
   max-width: 1200px; /* Optional: Set a maximum width to the navbar */
-  background-color: #fff; /* Replace with your desired background color */
-  z-index: 100;
+  z-index: 1;
   max-width: 93%;
   margin: 0 auto;
   background: rgba(14, 14, 14, 0.7);
@@ -38,6 +37,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 2.625rem 3.25rem;
+  mix-blend-mode: difference !important;
+}
+.nav-section .nav-links a {
+  mix-blend-mode: difference !important;
 }
 .nav-section .nav-links .brand-logo-2-container {
   display: none;

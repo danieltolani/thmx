@@ -1,9 +1,8 @@
 import React from "react";
-import '../styles/products.css'
+import "../styles/products.css";
 import { useState } from "react";
 
 const ProductsDisplay = (props) => {
-
   const [x, setX] = useState("50%");
   const [y, setY] = useState("50%");
 
@@ -15,34 +14,32 @@ const ProductsDisplay = (props) => {
     setY(`${posY}px`);
   };
 
-    return (
-        <section className="products-section">
+  return (
+    <section className="product-grid-box">
       <div className="products">
-      <div className="card-details">
-        <div className="card-lhs">
-          <div className="product-copies">
+        <div className="card-details">
+          <div className="card-lhs">
+            <div className="product-copies">
               <h1>{props.productHeading}</h1>
               <p>{props.productParagraph}</p>
             </div>
             <button
-            className="button"
-            style={{
-              "--x": x,
-              "--y": y,
-            }}
-            onMouseMove={handleMouseMove}
-          >
-            {props.btnCopy}
-          </button>
-        </div>
+              className="button"
+              style={{
+                "--x": x,
+                "--y": y,
+              }}
+              onMouseMove={handleMouseMove}
+            >
+              {props.btnCopy}
+            </button>
+          </div>
 
-        <img className="img" alt={props.alt} src={props.source} />
-    
+          <img className="img" alt={props.alt} src={props.source} />
         </div>
       </div>
     </section>
-    )
-}
-
+  );
+};
 
 export default ProductsDisplay;

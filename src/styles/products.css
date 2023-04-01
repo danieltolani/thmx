@@ -15,59 +15,180 @@
   src: url(../assets/fonts/NeueMachina-Ultrabold.woff) format("woff");
   font-weight: 800;
 }
-section.products-section {
-  border: 1px solid #D7D7D7;
+.products-wrapper {
+  margin-bottom: 3.375rem;
+}
+.products-wrapper > h1 {
+  margin-top: 3.635rem !important;
+  font-size: 2.25rem;
+  margin-bottom: 2.875rem !important;
+  text-align: center;
+  max-width: 33rem;
+  text-align: center;
+  margin: 0 auto;
+  background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.7) -5.51%, #ffffff 62.38%, rgba(255, 255, 255, 0.13) 116.64%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.products-wrapper .products-data-container {
+  max-width: 93%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+.products-wrapper .products-data-container > :first-child {
+  grid-column: 1/-1;
+}
+.products-wrapper .products-data-container > * {
+  height: 576px;
+  min-width: 100%;
+}
+@media only screen and (max-width: 90.625rem) {
+  .products-wrapper .products-data-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.products-wrapper section.product-grid-box {
   border-radius: 15px;
-  color: wheat !important;
   display: grid;
   background: rgba(14, 14, 14, 0.7);
   border: 1px solid rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(7.5px);
-  /* Note: backdrop-filter has minimal browser support */
   border-radius: 53px;
 }
-section.products-section .products {
+@media only screen and (max-width: 48rem) {
+  .products-wrapper section.product-grid-box .products::before {
+    background: rgb(14, 14, 14) !important;
+    background: linear-gradient(90deg, rgba(14, 14, 14, 0.8) 70%, rgba(14, 14, 14, 0.4) 100%) !important;
+    backdrop-filter: blur(1px) !important;
+  }
+}
+@media only screen and (max-width: 90.625rem) {
+  .products-wrapper section.product-grid-box:not(:first-child) .products::before {
+    backdrop-filter: blur(0px) !important;
+  }
+}
+@media only screen and (max-width: 92.25rem) {
+  .products-wrapper section.product-grid-box:first-child .products {
+    position: relative;
+  }
+  .products-wrapper section.product-grid-box:first-child .products img.img {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-2rem);
+    right: -50px;
+  }
+  .products-wrapper section.product-grid-box:first-child .products::before {
+    background: rgb(14, 14, 14);
+    background: linear-gradient(90deg, rgb(14, 14, 14) 10%, rgba(14, 14, 14, 0) 100%);
+    border-radius: 53px;
+  }
+}
+@media only screen and (max-width: 100.875rem) {
+  .products-wrapper section.product-grid-box:not(:first-child) .products {
+    position: relative;
+  }
+  .products-wrapper section.product-grid-box:not(:first-child) .products img.img {
+    position: absolute;
+    bottom: 0;
+    transform: translateX(-2rem);
+  }
+  .products-wrapper section.product-grid-box:not(:first-child) .products::before {
+    background: rgb(14, 14, 14);
+    background: linear-gradient(90deg, rgb(14, 14, 14) 10%, rgba(14, 14, 14, 0) 100%);
+    border-radius: 53px;
+  }
+}
+@media only screen and (max-width: 184rem) {
+  .products-wrapper section.product-grid-box:not(:first-child) .products {
+    position: relative;
+  }
+  .products-wrapper section.product-grid-box:not(:first-child) .products img.img {
+    position: absolute;
+    bottom: 0;
+    right: -50px;
+    transform: translateX(-2rem);
+  }
+  .products-wrapper section.product-grid-box:not(:first-child) .products::before {
+    background: rgb(14, 14, 14);
+    background: linear-gradient(90deg, rgb(14, 14, 14) 10%, rgba(14, 14, 14, 0) 100%);
+    border-radius: 53px;
+    backdrop-filter: blur(1px);
+  }
+}
+.products-wrapper section.product-grid-box .products {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   flex-direction: column;
   width: 100%;
   padding-left: 3.25rem;
   cursor: pointer;
-  position: relative;
   max-width: 100%;
   padding-top: auto;
+  flex-wrap: wrap !important;
 }
-section.products-section .products img.img {
+.products-wrapper section.product-grid-box .products::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 53px;
+  background: rgb(14, 14, 14);
+  background: linear-gradient(90deg, rgb(14, 14, 14) 10%, rgba(14, 14, 14, 0) 100%);
+  z-index: 1;
+}
+.products-wrapper section.product-grid-box .products img.img {
   overflow: visible; /* allow the image to overflow the flex container */
   transform: translateX(2rem);
+  flex-shrink: 1;
+  max-width: 100%;
+  object-fit: cover;
 }
-section.products-section .products .card-details {
+.products-wrapper section.product-grid-box .products img.img::before, .products-wrapper section.product-grid-box .products img.img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  border: 2px solid red;
+  background-color: red;
+}
+.products-wrapper section.product-grid-box .products .card-details {
   justify-self: flex-end;
   margin-top: auto !important;
   color: white !important;
   display: flex;
   justify-content: space-between;
 }
-section.products-section .products .card-details .card-lhs {
+.products-wrapper section.product-grid-box .products .card-details .card-lhs {
   transform: translateY(-4rem);
   align-self: flex-end;
   flex-shrink: 0;
+  z-index: 3;
 }
-section.products-section .products .card-details .card-lhs .product-copies {
+.products-wrapper section.product-grid-box .products .card-details .card-lhs .product-copies {
   display: flex;
   flex-direction: column;
 }
-section.products-section .products .card-details .card-lhs .product-copies > h1 {
+.products-wrapper section.product-grid-box .products .card-details .card-lhs .product-copies > h1 {
   font-size: 3.75em;
   font-weight: 800;
   max-width: 26.625rem;
-  background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.7) -5.51%, #FFFFFF 62.38%, rgba(255, 255, 255, 0.13) 116.64%);
+  background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.7) -5.51%, #ffffff 62.38%, rgba(255, 255, 255, 0.13) 116.64%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
 }
-section.products-section .products .card-details .card-lhs .product-copies > p {
+.products-wrapper section.product-grid-box .products .card-details .card-lhs .product-copies > p {
   font-size: 1.75rem;
   margin-top: 0.625em;
   max-width: 36.545rem;
@@ -79,7 +200,7 @@ section.products-section .products .card-details .card-lhs .product-copies > p {
   background-clip: text;
   text-fill-color: transparent;
 }
-section.products-section .products .card-details .card-lhs button.button {
+.products-wrapper section.product-grid-box .products .card-details .card-lhs button.button {
   --x: 50%;
   --y: 50%;
   font-family: "Neue Machina";
@@ -95,42 +216,10 @@ section.products-section .products .card-details .card-lhs button.button {
   font-weight: 800;
   /* The magic */
   border: 2px solid transparent;
-  background: linear-gradient(rgba(242, 5, 159, 0.1843137255), rgba(62, 10, 45, 0.3490196078)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #f2059f, #5f17a7, rgba(14, 207, 229, 0.1411764706)) border-box;
+  background: rgb(95, 23, 167);
+  background: radial-gradient(circle, rgb(95, 23, 167) 0%, rgba(62, 10, 45, 0.3490196078)) padding-box, radial-gradient(farthest-corner at var(--x) var(--y), #f2059f, #5f17a7, rgba(14, 207, 229, 0.1411764706)) border-box;
   border: 1px solid transparent;
   font-size: 1.25rem;
-}
-
-.products-wrapper {
-  margin-bottom: 3.375rem;
-}
-.products-wrapper > h1 {
-  margin-top: 3.635rem !important;
-  font-size: 2.25rem;
-  margin-bottom: 2.875rem !important;
-  text-align: center;
-  max-width: 33rem;
-  text-align: center;
-  margin: 0 auto;
-  background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.7) -5.51%, #FFFFFF 62.38%, rgba(255, 255, 255, 0.13) 116.64%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-fill-color: transparent;
-}
-
-.products-data-container {
-  max-width: 93%;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-}
-.products-data-container > :first-child {
-  grid-column: 1/-1;
-}
-.products-data-container > * {
-  height: 576px;
-  min-width: 100%;
 }
 
 /*# sourceMappingURL=products.css.map */
