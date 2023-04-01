@@ -16,13 +16,13 @@
   font-weight: 800;
 }
 .nav-section {
+  z-index: 99999;
   position: fixed;
   top: 70px; /* Replace with the desired distance from top */
   left: 50%;
   transform: translateX(-50%);
-  width: 80%; /* Replace with desired width percentage */
-  max-width: 1200px; /* Optional: Set a maximum width to the navbar */
-  z-index: 1;
+  width: 80%;
+  max-width: 1200px;
   max-width: 93%;
   margin: 0 auto;
   background: rgba(14, 14, 14, 0.7);
@@ -32,6 +32,13 @@
   background-attachment: scroll;
   border-radius: 500px;
 }
+@media only screen and (max-width: 58rem) {
+  .nav-section {
+    top: 50px;
+    max-width: 100% !important;
+    width: 90%;
+  }
+}
 .nav-section .nav-links {
   display: flex;
   justify-content: space-between;
@@ -39,8 +46,23 @@
   padding: 2.625rem 3.25rem;
   mix-blend-mode: difference !important;
 }
-.nav-section .nav-links a {
-  mix-blend-mode: difference !important;
+@media only screen and (max-width: 58rem) {
+  .nav-section .nav-links {
+    padding: 1.25rem 1.5rem;
+  }
+}
+.nav-section .nav-links svg.hamburger-icon {
+  display: none;
+}
+@media only screen and (max-width: 58rem) {
+  .nav-section .nav-links svg.hamburger-icon {
+    display: block;
+  }
+}
+@media only screen and (max-width: 58rem) {
+  .nav-section .nav-links .nav-routes-container {
+    display: none !important;
+  }
 }
 .nav-section .nav-links .brand-logo-2-container {
   display: none;

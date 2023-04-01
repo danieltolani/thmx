@@ -2,9 +2,25 @@
 
 section.home-section {
   padding-top: 16.6875rem;
+
+  @media only screen and (max-width: 43.75rem) {
+    padding-top: 14rem;
+  }
+
+  @media only screen and (max-width: 31.25rem) {
+    padding-top: 12rem !important;
+  }
+
   .home {
-  // border: 2px solid red;
   min-height: calc(100vh - 16.6875rem);
+
+  @media only screen and (max-width: 43.75rem) {
+    min-height: calc(100vh - 14rem) !important; 
+  }
+
+  @media only screen and (max-width: 31.25rem) {
+    min-height: calc(100vh - 12rem) !important;
+  }
 
     .hero-section {
       display: flex;
@@ -16,19 +32,34 @@ section.home-section {
         font-family: "Neue Machina";
         font-style: normal;
         font-weight: 800;
-        font-size: 90px;
+        font-size: 5.625rem;
         line-height: 120%;
         text-align: center;
         background-size: 300% 100%;
-        // background-image: linear-gradient(to right, red, orange, yellow);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
         max-width: 58rem;
         margin: 0 auto;
-        transition: all 1s ease;
+        transition: all 0.25s ease-in-out;
         animation: gradientAnimation 5s ease infinite;
+
+        @media only screen and (max-width: 58rem) {
+          font-size: 3.625rem !important;
+          padding: 0 4rem;
+        }
+
+        @media only screen and (max-width: 43.75rem) {
+          font-size: 2.625rem !important;
+          max-width: 100%;
+        }
+
+        @media only screen and (max-width: 31.25rem) {
+          max-width: 100%;
+          font-size: 2.5rem !important;
+          padding: 0 0.8rem;
+        }
       }
 
       & > p {
@@ -42,6 +73,17 @@ section.home-section {
         margin-top: 0.875rem !important;
         max-width: 35rem;
         margin: 0 auto;
+
+        @media only screen and (max-width: 58rem) {
+          font-size: 1.5rem !important;
+        }
+
+        @media only screen and (max-width: 31.25rem) {
+          margin-top: 0.5rem !important;
+          max-width: 100%;
+          font-size: 1.5rem !important;
+          padding: 1.125rem;
+        }
       }
 
       button.btn {
@@ -77,6 +119,12 @@ section.home-section {
         border: 1px solid transparent;
         font-size: 1.25rem;
         animation: borderGradientAnimation 1s ease infinite;
+
+        @media only screen and (max-width: 31.25rem) {
+          margin-top: 1.5rem !important;
+
+        }
+
       }
 
       @keyframes hold-blink {
