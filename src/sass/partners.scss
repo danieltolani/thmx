@@ -1,0 +1,50 @@
+@import "utils";
+
+section.partners-section{
+    // border: 2px solid red;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .partners{
+        // border: 2px solid yellow;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        & > h1 {
+            font-size: 2.25rem;
+            color: $text-light;
+            text-align: center;
+        }
+
+        .partners-logos{
+            text-align: center;
+
+            & > :first-child{
+                margin-right: 3.5rem;
+            }
+
+            & > svg {
+                margin-top: 4.375rem;
+                opacity: 0.35;
+                transition: all 0.25s ease-out;
+
+                &:hover{
+                    opacity: 1;
+                }
+            }
+        }
+
+        & > p{
+            font-size: 1.5rem;
+            color: #BABAC4;
+            text-align: center;
+            max-width: 24.5rem;
+            line-height: 120%;
+            // border: 2px solid red;
+            margin: 0 auto;
+            margin-top: 3.75rem;
+        }
+    }
+}

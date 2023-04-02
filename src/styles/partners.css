@@ -1,0 +1,57 @@
+@font-face {
+  font-family: "neue machina";
+  src: url(../assets/fonts/NeueMachina-Light.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue machina";
+  src: url(../assets/fonts/NeueMachina-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "neue machina";
+  src: url(../assets/fonts/NeueMachina-Ultrabold.woff) format("woff");
+  font-weight: 800;
+}
+section.partners-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+section.partners-section .partners {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+section.partners-section .partners > h1 {
+  font-size: 2.25rem;
+  color: #FFFFFF;
+  text-align: center;
+}
+section.partners-section .partners .partners-logos {
+  text-align: center;
+}
+section.partners-section .partners .partners-logos > :first-child {
+  margin-right: 3.5rem;
+}
+section.partners-section .partners .partners-logos > svg {
+  margin-top: 4.375rem;
+  opacity: 0.35;
+  transition: all 0.25s ease-out;
+}
+section.partners-section .partners .partners-logos > svg:hover {
+  opacity: 1;
+}
+section.partners-section .partners > p {
+  font-size: 1.5rem;
+  color: #BABAC4;
+  text-align: center;
+  max-width: 24.5rem;
+  line-height: 120%;
+  margin: 0 auto;
+  margin-top: 3.75rem;
+}
+
+/*# sourceMappingURL=partners.css.map */
