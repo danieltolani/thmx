@@ -53,8 +53,8 @@ const Layout = () => {
             <div className='nav-routes-container'>
                 <CustomNavLink className='side-bar-link' to='/' >Home</CustomNavLink>
                 <CustomNavLink className='side-bar-link' to='/place-to-stay' >About</CustomNavLink>
-                <CustomNavLink className='side-bar-link' to='/NFTS' >pay</CustomNavLink>
-                <CustomNavLink className='side-bar-link' to='/NFTS' >get started</CustomNavLink>
+                <CustomNavLink className='side-bar-link' to='/nfts' >pay</CustomNavLink>
+                <CustomNavLink className='side-bar-link' to='/get-started' >get started</CustomNavLink>
             </div>
 
             {/* <div className="nav-rhs">

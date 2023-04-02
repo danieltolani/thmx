@@ -83,6 +83,14 @@
   font-weight: 800;
   font-size: 18.9px;
   line-height: 18px;
+  display: flex;
+  align-items: center;
+}
+.nav-section .nav-links .nav-routes-container a.side-bar-link:last-child {
+  background: white;
+  color: #0E0E0E;
+  padding: 1.25rem 1.5rem;
+  border-radius: 33px;
 }
 
 @media screen and (max-width: 890px) {
