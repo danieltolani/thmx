@@ -1,0 +1,92 @@
+@import 'utils';
+
+section.new-era-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    // justify-content: center;
+
+    @media only screen and (max-width: 37.5rem){
+        height: auto;
+        margin-top: 8rem;
+    }
+
+    .new-era{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient(288.53deg, rgba(242, 5, 159, 0.1) -22.66%, rgba(14, 207, 229, 0.1) 76.21%);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        border-radius: 53px;
+        max-width: 88%;
+        width: 100%;
+        margin: 0 auto;
+        padding-top: 5rem;
+        padding-bottom: 8.5rem;
+        height: auto;
+
+        @media only screen and (max-width: 37.5rem){
+            padding: 8rem 0 !important;
+        }
+
+
+
+        .card-vectors{
+            display: flex;
+            align-items: center;
+            
+            & > :not(:first-child){
+                margin-left: 0.25rem;
+            }
+        }
+
+        .section-copies{
+            text-align: center;
+            margin-top: 0.75rem;
+
+            @media only screen and (max-width: 51.25rem){
+                margin-top: 1.5rem;
+            }
+
+            @media only screen and (max-width: 37.5rem){
+                margin-top: 2.5rem;
+            }
+
+
+
+            & > h1 {
+                font-size: 6.25rem;
+                background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.7) -5.51%, #FFFFFF 62.38%, rgba(255, 255, 255, 0.13) 116.64%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                max-width: 55.1875rem;
+                line-height: 120%;
+
+                @media only screen and (max-width: 51.25rem){
+                    font-size: 4rem;
+                }
+
+                @media only screen and (max-width: 37.5rem){
+                    font-size: 2.5rem;
+                }
+            }
+
+            & > p {
+                font-size: 1.75rem;
+                background: linear-gradient(96.41deg, rgba(255, 255, 255, 0.42) -5.51%, rgba(255, 255, 255, 0.6) 62.38%, rgba(255, 255, 255, 0.078) 116.64%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;
+                margin-top: 1.875rem;
+
+                @media only screen and (max-width: 37.5rem){
+                    font-size: 1.4rem;
+                    margin-top: 1.5rem;
+                }
+            }
+        }
+    }
+}

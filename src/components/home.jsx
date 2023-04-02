@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/home.css";
 import { useState } from "react";
 import Products from "./products";
+import NewEra from "./newEra";
 
 const Home = () => {
   const [x, setX] = useState("50%");
@@ -40,6 +41,7 @@ const Home = () => {
         </div>
       </div>
       <Products/>
+      <NewEra />
     </section>
   );
 };
